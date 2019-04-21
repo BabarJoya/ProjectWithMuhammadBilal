@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 
@@ -78,44 +78,56 @@ $Rem = "PASS";
 </thead>
 <tr>
 	<?php
+	if ($myObj->fb->Sub1->tot>0) {
 	echo "<td>" . $myObj->fb->Sub1->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub1->obt . "/" . $myObj->fb->Sub1->tot . "</td>";
 	if ($myObj->fb->Sub1->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+	}
 	?>
 </tr>
 <tr>
 	<?php
+	if ($myObj->fb->Sub2->tot>0) {
 	echo "<td>" . $myObj->fb->Sub2->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub2->obt . "/" . $myObj->fb->Sub2->tot . "</td>";
 	if ($myObj->fb->Sub2->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+	}
 	?>
 </tr>
 <tr>
 	<?php
+	if ($myObj->fb->Sub3->tot>0) {
 	echo "<td>" . $myObj->fb->Sub3->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub3->obt . "/" . $myObj->fb->Sub3->tot . "</td>";
 	if ($myObj->fb->Sub3->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+		}
 	?>
 </tr>
 <tr>
 	<?php
+	if ($myObj->fb->Sub4->tot>0) {
 	echo "<td>" . $myObj->fb->Sub4->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub4->obt . "/" . $myObj->fb->Sub4->tot . "</td>";
 	if ($myObj->fb->Sub4->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+	}
 	?>
 </tr>
 <tr>
 	<?php
+	if ($myObj->fb->Sub5->tot>0) {
 	echo "<td>" . $myObj->fb->Sub5->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub5->obt . "/" . $myObj->fb->Sub5->tot . "</td>";
 	if ($myObj->fb->Sub5->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+	}
 	?>
 </tr>
 <tr>
 	<?php
+	if ($myObj->fb->Sub6->tot>0) {
 	echo "<td>" . $myObj->fb->Sub6->nam . "</td>";
 	echo "<td>" . $myObj->fb->Sub6->obt . "/" . $myObj->fb->Sub6->tot . "</td>";
 	if ($myObj->fb->Sub6->per < 33) { echo "<td class='table-danger'>Fail</td>";$Rem="FAIL"; } else { echo "<td class='table-success'>Pass</td>"; }
+	}
 	?>
 </tr>
 <tr>

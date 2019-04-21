@@ -182,14 +182,26 @@ function drawChart2() {
 	var data = google.visualization.arrayToDataTable([
         ['Marks', 'Correct', 'Incorrect', { role: 'annotation' } ],
 		<?php
-		echo  "[ '" . $myObj->fb->Sub1->nam . "'," . $myObj->fb->Sub1->per . "," . (100-$myObj->fb->Sub1->per) . ", ''],";
-        echo  "[ '" . $myObj->fb->Sub2->nam . "'," . $myObj->fb->Sub2->per . "," . (100-$myObj->fb->Sub2->per) . ", ''],";
-		echo  "[ '" . $myObj->fb->Sub3->nam . "'," . $myObj->fb->Sub3->per . "," . (100-$myObj->fb->Sub3->per) . ", ''],";
-		echo  "[ '" . $myObj->fb->Sub4->nam . "'," . $myObj->fb->Sub4->per . "," . (100-$myObj->fb->Sub4->per) . ", ''],";
-		echo  "[ '" . $myObj->fb->Sub5->nam . "'," . $myObj->fb->Sub5->per . "," . (100-$myObj->fb->Sub5->per) . ", ''],";
-		echo  "[ '" . $myObj->fb->Sub6->nam . "'," . $myObj->fb->Sub6->per . "," . (100-$myObj->fb->Sub6->per) . ", '']";
+		if ($myObj->fb->Sub1->tot>0) {
+		echo  "[ '" . $myObj->fb->Sub1->nam . "'," . $myObj->fb->Sub1->per . "," . (100-$myObj->fb->Sub1->per) . ", '']";
+		}
+		if ($myObj->fb->Sub2->tot>0) {
+        echo  ",[ '" . $myObj->fb->Sub2->nam . "'," . $myObj->fb->Sub2->per . "," . (100-$myObj->fb->Sub2->per) . ", '']";
+		}
+		if ($myObj->fb->Sub3->tot>0) {
+		echo  ",[ '" . $myObj->fb->Sub3->nam . "'," . $myObj->fb->Sub3->per . "," . (100-$myObj->fb->Sub3->per) . ", '']";
+		}
+		if ($myObj->fb->Sub4->tot>0) {
+		echo  ",[ '" . $myObj->fb->Sub4->nam . "'," . $myObj->fb->Sub4->per . "," . (100-$myObj->fb->Sub4->per) . ", '']";
+		}
+		if ($myObj->fb->Sub5->tot>0) {
+		echo  ",[ '" . $myObj->fb->Sub5->nam . "'," . $myObj->fb->Sub5->per . "," . (100-$myObj->fb->Sub5->per) . ", '']";
+		}
+		if ($myObj->fb->Sub6->tot>0) {
+		echo  ",[ '" . $myObj->fb->Sub6->nam . "'," . $myObj->fb->Sub6->per . "," . (100-$myObj->fb->Sub6->per) . ", '']";
+		}
 		if (property_exists($myObj->fb, 'Sub7')) {
-		echo ",[ '" . $myObj->fb->Sub7->nam . "'," . $myObj->fb->Sub7->per . "," . (100-$myObj->fb->Sub7->per) . ", '']";
+		echo  ",[ '" . $myObj->fb->Sub7->nam . "'," . $myObj->fb->Sub7->per . "," . (100-$myObj->fb->Sub7->per) . ", '']";
 		}
 		?>
 
